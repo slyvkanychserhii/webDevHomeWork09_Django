@@ -1,0 +1,17 @@
+
+alias
+
+alias _run='python manage.py runserver'
+alias _mm='python manage.py makemigrations'
+alias _m='python manage.py migrate'
+
+unalias _run; \
+unalias _mm; \
+unalias _m; \
+
+SQLite:
+alias _tu='python manage.py dbshell -- ".mode box --wrap 30" "select * from auth_user;"'; \
+alias _tm='python manage.py dbshell -- ".mode box --wrap 50 -ww" "select * from django_migrations;"'; \
+
+unalias _tu; \
+unalias _tm; \
